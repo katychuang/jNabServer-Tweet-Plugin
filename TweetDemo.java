@@ -28,10 +28,9 @@ import java.net.URLConnection;
 
 
 /**
- * in /Tomcat/apache-tomcat-6.0.29/webapps/jNabServer/src/jNab/ext/helperPlugins
- * Plugin for tweeting.
+ * Plugin connects to twitter through machinetweets.com
  * 
- * 
+ * file should be placed in /jNabServer/src/jNab/ext/helperPlugins
  * @author Kat Chuang
  
 
