@@ -1,0 +1,11 @@
+Nabaztag is a Wi-Fi enabled ambient electronic device in the shape of a rabbit.. [Wikipedia](http://en.wikipedia.org/wiki/Nabaztag)
+
+jNabServer replaces Violet platform with a Java based server that can be run locally on a server machine or even on some integrated platforms. Developers can write plugin components, which handle requests sent by Nabaztag (button input, RFID input, audio recording etc.) and send back commands to play audio, move ears and flash the lights.
+
+Code: http://code.google.com/p/jnabserver
+
+Links
+jNabServer Documentation - http://www.cs.uta.fi/hci/spi/jnabserver/documentation
+jNabServer Guide - http://www.saraproft.net/blog/?p=912
+Nabaztag choreographies - http://www.saraproft.org/?p=965
+
