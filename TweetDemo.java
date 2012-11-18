@@ -45,21 +45,23 @@ public class TweetDemo extends AbstractPlugin implements RFIDEventListener //Cli
 	private static boolean test = true;
 	
 	// Your OAUTH consumer and secret keys
-	private final static String OAUTH_CONSUMER = "4YeMHSvzkJr9fCen8fNqw";
-	private final static String OAUTH_SECRET = "V0J6uQMPYdYjHCCn08K2qoZHVDS1838oMu4DH7wX2Fo";	
-	String tUser = "totoronab";
-	String tPasswd = "shoeseum2010";
-    private static String PLUGIN_NAME = "Tweet_Demo";	/** Plugin name. */
-    private static String[] PARAMETERS = {};			/** Set of parameters supported by plugin; */
-    private int level;									/** Level of the monitored process.*/
-    /*** Level (0:low, 1:medium, 2:high) of the monitored process.*/
-    private long lastSwitchingTime;				/*** The last time a level switch occured.*/
-    public static final String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
+	private final static String OAUTH_CONSUMER = "CONSUMER_KEY";
+	private final static String OAUTH_SECRET = "SECRET_KEY";	
+	String tUser = "USERNAME";
+	String tPasswd = "PASSWORD";
+    
+	private static String PLUGIN_NAME = "Tweet_Demo";	/** Plugin name. */
+    	private static String[] PARAMETERS = {};		/** Set of parameters supported by plugin; */
+    	private int level;					/** Level of the monitored process.*/
+    	
+	/*** Level (0:low, 1:medium, 2:high) of the monitored process.*/
+    	private long lastSwitchingTime;				/*** The last time a level switch occured.*/
+    	public static final String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
 
-    /**
-     * Creating a new plugin instance.
-     */
-    public TweetDemo() throws Exception{
+	/**
+	* Creating a new plugin instance.
+	*/
+    	public TweetDemo() throws Exception{
 		super(PLUGIN_NAME, PARAMETERS);
 		
 		this.level = 1;
@@ -89,16 +91,16 @@ public class TweetDemo extends AbstractPlugin implements RFIDEventListener //Cli
 		}		
 			
 
-    }//end public tweetdemo() 
+    	}//end public tweetdemo() 
 
     
-    public static String now() {
-    	Calendar cal = Calendar.getInstance();
-    	SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT_NOW);
+    	public static String now() {
+    		Calendar cal = Calendar.getInstance();
+    		SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT_NOW);
    	 	return sdf.format(cal.getTime());
 	}
 
-    private String getChoreography() {
+    	private String getChoreography() {
 		switch (this.level){
 		case 0:
 			return "GreenBlinkingWithEars";
@@ -109,7 +111,7 @@ public class TweetDemo extends AbstractPlugin implements RFIDEventListener //Cli
 		default:
 			return "raisedEars";
 		}
-    }
+    	}
 // 
 //   private static void storeAccessToken(int useId, AccessToken accessToken){
 //     //store accessToken.getToken()
@@ -117,9 +119,9 @@ public class TweetDemo extends AbstractPlugin implements RFIDEventListener //Cli
 //   }
 
 	/**
-     * @see jNab.core.events.RFIDEventListener#onRfid(java.lang.String)
-     */
-    public void onRfid(String rfid) {
+     	* @see jNab.core.events.RFIDEventListener#onRfid(java.lang.String)
+     	*/
+    	public void onRfid(String rfid) {
     
 		try {
 			// Construct data
@@ -145,7 +147,7 @@ public class TweetDemo extends AbstractPlugin implements RFIDEventListener //Cli
 			System.out.println("~*~*~*~*~*~* Error = " + e + ")\n\n");
 		}		
     
-    	Packet p = new Packet();
+    		Packet p = new Packet();
 		System.out.println("~*~*~*~*~*~* RFID event received (tagID=" + rfid + ") ~*~*~*~*~*~*  \n\n");
 	
 		Random rd = new Random();
